@@ -19,5 +19,5 @@ class app():
         ManufactureCost = 0
         Validation(SalePrice, "Enter the sales price in Canadian dollars:\n")
         Validation(ManufactureCost, "Enter the cost of manufacturing in Canadian dollrs:\n")
-        
+
         
