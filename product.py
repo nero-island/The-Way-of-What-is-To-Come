@@ -43,4 +43,4 @@ class Product:
     #Returns Total profit
 
     def Profit(self):
-        return sum(self._MonthlySales)*self.SalePrice - sum(self._EstMonthlyUnits)*self.ManufactureCost
+        return sum(self._MonthlySales)*self._SalePrice - 1200*int(self._ManufactureCost)
