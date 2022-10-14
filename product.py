@@ -8,4 +8,17 @@ class Product:
         self._StockLevel = StockLevel
         self._EstMonthlyUnits = EstMonthlyUnits
 
-    
+    #Attribute return methods
+
+    def ProductCode(self):
+        return self._ProductCode
+    def ProductName(self):
+        return self._ProductName
+    def SalePrice(self):
+        return self._SalePrice
+    def ManufactureCost(self):
+        return self._ManufactureCost
+    def StockLevel(self):
+        return self._StockLevel
+    def EstMonthlyUnits(self):
+        return self._EstMonthlyUnits
