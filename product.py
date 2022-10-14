@@ -48,4 +48,3 @@ class Product:
 
     def Profit(self):
         return sum(self._MonthlySales)*self.SalePrice - sum(self._MonthlyUnits)*self.ManufactureCost
-    
