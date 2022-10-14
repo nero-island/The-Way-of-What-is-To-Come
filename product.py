@@ -28,23 +28,20 @@ class Product:
     #Monthly units produced
 
     def ActMonthlyUnits(self):
-        MonthlyUnits = []
         MonthlySales = []
         StockRecord = []
         for i in range(12):
-            MonthlyUnits.append(self._EstMonthlyUnits + random.randint(-10, 10))
             MonthlySales.append(self._EstMonthlyUnits + random.randint(-10, 10))
             if i == 0:
-                StockRecord.append(self._StockLevel + MonthlyUnits[0] - MonthlySales[0])
+                StockRecord.append(self._StockLevel + self._EstMonthlyUnits - MonthlySales[0])
             else:
-                StockRecord.append(StockRecord[i - 1] + MonthlyUnits(i) - MonthlySales(i))
+                StockRecord.append(StockRecord[i - 1] + self._EstMonthlyUnits - MonthlySales[i])
 
         self._MonthlyStock = StockRecord
-        self._MonthlyUnits = MonthlyUnits
         self._MonthlySales = MonthlySales
         return StockRecord
 
     #Returns Total profit
 
     def Profit(self):
-        return sum(self._MonthlySales)*self.SalePrice - sum(self._MonthlyUnits)*self.ManufactureCost
+        return sum(self._MonthlySales)*self.SalePrice - sum(self._EstMonthlyUnits)*self.ManufactureCost
