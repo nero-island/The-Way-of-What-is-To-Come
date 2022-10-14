@@ -36,12 +36,13 @@ class App:
 
     def AnnualStatement(self):
         Product = self.CreateProduct()
+        Product.ActMonthlyUnits()
         for i in range(12):
-            print(f"Month {i+1}:\n    Manufactured: {Product.EstMonthlyUnits()} units\n")
-            print(f"    Stock: {(Product.ActMonthlyUnits())[i]}")
-            print(f"    Sales: {(Product._MonthlySales)[i]}")
+            print(f"Month {i+1}:\n    Manufactured: {Product.EstMonthlyUnits()} units")
+            print(f"    Stock: {Product._MonthlyStock[i]}")
+            print(f"    Sales: {Product._MonthlySales[i]}")
+        print(f"Profit for this year was {Product.Profit()}")
 
 
 app = App()
 app.AnnualStatement()
-

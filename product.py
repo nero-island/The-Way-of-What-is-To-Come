@@ -39,7 +39,6 @@ class Product:
 
         self._MonthlyStock = StockRecord
         self._MonthlySales = MonthlySales
-        return StockRecord
 
     #Returns Total profit
 
