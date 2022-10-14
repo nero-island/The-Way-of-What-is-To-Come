@@ -44,4 +44,8 @@ class Product:
         self._MonthlySales = MonthlySales
         return StockRecord
 
-    def 
+    #Returns Total profit
+
+    def Profit(self):
+        return sum(self._MonthlySales)*self.SalePrice - sum(self._MonthlyUnits)*self.ManufactureCost
+    
